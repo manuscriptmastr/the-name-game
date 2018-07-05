@@ -1,0 +1,10 @@
+html, body, main, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
