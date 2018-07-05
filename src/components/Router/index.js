@@ -8,9 +8,9 @@ import SettingsScreen from '../SettingsScreen/index';
 let Router = () =>
   <RouteList>
     <Switch>
-      <Route path="/" component={IntroScreen} />
-      <Route path="/play" component={PlayScreen} />
       <Route path="/settings" component={SettingsScreen} />
+      <Route path="/play" component={PlayScreen} />
+      <Route path="/" component={IntroScreen} />
     </Switch>
   </RouteList>
 
