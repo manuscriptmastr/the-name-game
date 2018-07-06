@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { compose, withHandlers, lifecycle } from 'recompose';
 import { updateAll as updatePersons } from '../../actions/person';
 import { getAll as getPersons } from '../../api/person';
-import { limit } from '../../lib/array';
+import { pipe } from '../../lib/utility';
+import { limit, shuffle } from '../../lib/array';
 import Layout from '../Layout';
 import PersonList from '../Person/List';
 
@@ -12,7 +13,10 @@ let PlayScreen = ({ persons }) =>
     <PersonList persons={persons} />
   </Layout>
 
-let mapStateToProps = ({ persons, url }) => ({ persons: limit(5)(persons), url });
+let mapStateToProps = ({ persons, url }) => ({
+  persons: pipe(shuffle, limit(5))(persons),
+  url
+});
 
 let mapDispatchToProps = {
   updatePersons

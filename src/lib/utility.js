@@ -1,0 +1,1 @@
+export let pipe = (...ops) => (arr) => ops.reduce((a, op) => op(a), arr);
