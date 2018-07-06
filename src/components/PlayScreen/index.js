@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { compose, withHandlers, lifecycle } from 'recompose';
-import { updateAll as updatePersons } from '../../actions/person';
-import { getAll as getPersons } from '../../api/person';
+import { compose } from 'recompose';
 import { pipe } from '../../lib/utility';
 import { limit, shuffle, current } from '../../lib/array';
 import Layout from '../Layout';
@@ -18,23 +16,8 @@ let mapStateToProps = ({ persons, url }) => ({
   url
 });
 
-let mapDispatchToProps = {
-  updatePersons
-}
-
 let enhance = compose(
-  connect(mapStateToProps, mapDispatchToProps),
-  withHandlers({
-    updatePersons: ({ updatePersons, url }) => async () => {
-      let persons = await getPersons(url);
-      updatePersons(persons);
-    }
-  }),
-  lifecycle({
-    componentDidMount() {
-      this.props.updatePersons();
-    }
-  })
+  connect(mapStateToProps)
 );
 
 export default enhance(PlayScreen);
