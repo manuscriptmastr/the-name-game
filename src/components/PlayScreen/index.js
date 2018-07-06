@@ -1,5 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose, withHandlers, lifecycle } from 'recompose';
+import { updateAll as updatePersons } from '../../actions/person';
+import { getAll as getPersons } from '../../api/person';
+import { limit } from '../../lib/array';
 import Layout from '../Layout';
 import PersonList from '../Person/List';
 
@@ -8,6 +12,25 @@ let PlayScreen = ({ persons }) =>
     <PersonList persons={persons} />
   </Layout>
 
-let mapStateToProps = ({ persons }) => ({ persons });
+let mapStateToProps = ({ persons, url }) => ({ persons: limit(5)(persons), url });
 
-export default connect(mapStateToProps)(PlayScreen);
+let mapDispatchToProps = {
+  updatePersons
+}
+
+let enhance = compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  withHandlers({
+    updatePersons: ({ updatePersons, url }) => async () => {
+      let persons = await getPersons(url);
+      updatePersons(persons);
+    }
+  }),
+  lifecycle({
+    componentDidMount() {
+      this.props.updatePersons();
+    }
+  })
+);
+
+export default enhance(PlayScreen);

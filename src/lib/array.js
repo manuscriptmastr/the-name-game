@@ -1,0 +1,1 @@
+export let limit = (int) => (arr) => arr.slice(0, int);
