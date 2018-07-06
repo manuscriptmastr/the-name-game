@@ -4,7 +4,7 @@ import { compose, withHandlers, lifecycle } from 'recompose';
 import { updateAll as updatePersons } from '../../actions/person';
 import { getAll as getPersons } from '../../api/person';
 import { pipe } from '../../lib/utility';
-import { limit, shuffle } from '../../lib/array';
+import { limit, shuffle, current } from '../../lib/array';
 import Layout from '../Layout';
 import PersonList from '../Person/List';
 
@@ -14,7 +14,7 @@ let PlayScreen = ({ persons }) =>
   </Layout>
 
 let mapStateToProps = ({ persons, url }) => ({
-  persons: pipe(shuffle, limit(5))(persons),
+  persons: pipe(current, shuffle, limit(5))(persons),
   url
 });
 
