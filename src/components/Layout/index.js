@@ -3,10 +3,11 @@ import './styles.css';
 
 let Layout = ({ children }) =>
   <Fragment>
-    <header>This is the header</header>
+    <header>Header contains gear for settings</header>
     <main>
       {children}
     </main>
+    <footer>Footer contains your score</footer>
   </Fragment>
 
 export default Layout;
