@@ -1,0 +1,1 @@
+export let getAll = (url) => fetch(url).then(data => data.json());
