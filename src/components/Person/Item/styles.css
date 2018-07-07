@@ -2,9 +2,8 @@
   flex: 1;
   display: block;
   padding: 1vw;
-  text-decoration: none;
-  color: inherit;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .person:hover {

@@ -3,14 +3,13 @@ import './styles.css';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { hide as hideSettings } from '../../actions/setting';
-import { Link } from 'react-router-dom';
 
 let Settings = ({ settings, hideSettings }) =>
   settings.visible &&
   <div className="settings" >
-    <Link className="close" to="#" title="hide settings">
-      <img className="close__img" onerror="/assets/icon-profile.svg" src="/assets/icon-close.svg" alt="icon close" onClick={hideSettings} />
-    </Link>
+    <button className="close" onClick={hideSettings} >
+      <img className="close__img" src="/assets/icon-close.svg" alt="icon close" />
+    </button>
   </div>
 
 let mapStateToProps = ({ settings }) => ({ settings });

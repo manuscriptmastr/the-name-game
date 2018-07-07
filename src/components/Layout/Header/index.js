@@ -3,23 +3,20 @@ import './styles.css';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { show as showSettings } from '../../../actions/setting';
-import { Link } from 'react-router-dom';
 
-let Header = ({ showSettings, settings }) =>
+let Header = ({ showSettings }) =>
   <header>
-    <Link className="gear" to="#" title="show settings" onClick={showSettings} >
+    <button className="gear" onClick={showSettings} >
       <img className="gear__img" src="/assets/icon-gear-outline.svg" alt="icon gear outline" />
-    </Link>
+    </button>
   </header>
-
-let mapStateToProps = ({ settings }) => ({ settings });
 
 let mapDispatchToProps = {
   showSettings
 };
 
 let enhance = compose(
-  connect(mapStateToProps, mapDispatchToProps)
+  connect(null, mapDispatchToProps)
 );
 
 export default enhance(Header);

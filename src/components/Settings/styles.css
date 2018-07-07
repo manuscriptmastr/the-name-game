@@ -1,6 +1,7 @@
 .settings {
   display: block;
   position: absolute;
+  z-index: 1;
   padding: 20px;
   width: 100%;
   height: 100%;
@@ -10,7 +11,10 @@
 .close {
   display: block;
   padding: 10px;
+  border: none;
   border-radius: 999px;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .close__img {
