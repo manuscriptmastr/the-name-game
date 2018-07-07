@@ -1,13 +1,15 @@
 import React, { Fragment } from 'react';
 import './styles.css';
+import Header from './Header';
+import Footer from './Footer';
 
 let Layout = ({ children }) =>
   <Fragment>
-    <header>Header contains gear for settings</header>
+    <Header />
     <main>
       {children}
     </main>
-    <footer>Footer contains your score</footer>
+    <Footer />
   </Fragment>
 
 export default Layout;

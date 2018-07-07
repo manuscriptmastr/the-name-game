@@ -1,0 +1,12 @@
+.persons__list {
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.persons__item {
+  flex: 1;
+  display: flex;
+}
