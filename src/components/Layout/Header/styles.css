@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.gear {
+  display: block;
+  padding: 10px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.gear:hover {
+  background-color: lightgray;
+}
+
+.gear__img {
+  display: block;
+  width: 40px;
+}

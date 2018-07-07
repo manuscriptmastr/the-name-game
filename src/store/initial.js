@@ -1,5 +1,8 @@
 const initial = {
   url: "https://willowtreeapps.com/api/v1.0/profiles",
+  settings: {
+    visible: false
+  },
   persons: [
     {
       "id": "4NCJTL13UkK0qEIAAcg4IQ",

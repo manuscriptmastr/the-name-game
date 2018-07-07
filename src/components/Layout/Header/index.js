@@ -1,11 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './styles.css';
+import { compose } from 'recompose';
+import { connect } from 'react-redux';
+import { show as showSettings } from '../../../actions/setting';
 
-let Header = () =>
+let Header = ({ showSettings }) =>
   <header>
-    <Link to="#" >
-      <img src="/assets/icon-gear-outline.svg" alt="icon gear outline" />
-    </Link>
+    <button className="gear" onClick={showSettings} >
+      <img className="gear__img" src="/assets/icon-gear-outline.svg" alt="icon gear outline" />
+    </button>
   </header>
 
-export default Header;
+let mapDispatchToProps = {
+  showSettings
+};
+
+let enhance = compose(
+  connect(null, mapDispatchToProps)
+);
+
+export default enhance(Header);
