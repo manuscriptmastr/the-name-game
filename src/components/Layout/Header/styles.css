@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.gear {
+  display: block;
+  padding: 10px;
+  border-radius: 999px;
+}
+
+.gear:hover {
+  background-color: lightgray;
+}
+
+.gear__img {
+  display: block;
+  width: 40px;
+}
