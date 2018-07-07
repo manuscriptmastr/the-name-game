@@ -4,6 +4,7 @@
   padding: 1vw;
   border-radius: 4px;
   cursor: pointer;
+  transition: all ease 0.05s;
 }
 
 .person:hover {
@@ -23,7 +24,7 @@
   max-width: 15vw;
   text-align: center;
   opacity: 0;
-  transition: all ease 0.1s;
+  transition: inherit;
 }
 
 .person:hover .person__hint {
