@@ -1,3 +1,15 @@
+.person {
+  display: block;
+  padding: 1vw;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+}
+
+.person:hover {
+  background-color: lightgray;
+}
+
 .person__img {
   width: 15vw;
   height: 15vw;
@@ -5,4 +17,15 @@
   object-position: center;
   border-radius: 999px;
   background-color: lightgray;
+}
+
+.person__hint {
+  max-width: 15vw;
+  text-align: center;
+  opacity: 0;
+  transition: all ease 0.1s;
+}
+
+.person:hover .person__hint {
+  opacity: 1;
 }

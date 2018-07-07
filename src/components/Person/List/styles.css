@@ -6,5 +6,5 @@
 }
 
 .persons__item {
-  padding: 1vw;
+  flex-basis: 1;
 }
