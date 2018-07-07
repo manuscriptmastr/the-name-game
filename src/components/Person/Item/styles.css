@@ -1,0 +1,8 @@
+.person__img {
+  width: 15vw;
+  height: 15vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 999px;
+  background-color: lightgray;
+}
