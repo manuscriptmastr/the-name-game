@@ -6,8 +6,8 @@ import PlayScreen from '../PlayScreen';
 let Router = () =>
   <RouteList>
     <Switch>
-      <Route path="/play" component={PlayScreen} />
-      <Route path="/" component={IntroScreen} />
+      <Route path="/" component={PlayScreen} />
+      {/* <Route path="/" component={IntroScreen} /> */}
     </Switch>
   </RouteList>
 
