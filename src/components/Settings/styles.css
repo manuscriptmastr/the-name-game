@@ -1,6 +1,7 @@
 .settings {
   display: block;
   position: absolute;
+  font-size: 24px;
   z-index: 1;
   padding: 20px;
   width: 100%;
@@ -20,4 +21,13 @@
 .close__img {
   display: block;
   width: 40px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+label input {
+  margin-right: 10px;
 }

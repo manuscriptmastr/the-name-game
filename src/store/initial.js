@@ -1,7 +1,8 @@
 const initial = {
   url: "https://willowtreeapps.com/api/v1.0/profiles",
   settings: {
-    visible: false
+    visible: false,
+    hints: true
   },
   question: "1X2lomt8iIYImCQysey6Eq",
   answers: [
