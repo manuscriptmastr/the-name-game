@@ -1,25 +1,29 @@
 import React from 'react';
+import './styles.css';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
-import { pipe } from '../../lib/utility';
-import { limit, shuffle, current } from '../../lib/array';
+import { resetAll as resetAnswers } from '../../actions/answer';
 import Layout from '../Layout';
 import PersonList from '../Person/List';
 
-let PlayScreen = ({ persons, currentPerson }) =>
+let PlayScreen = ({ persons, currentPerson: { firstName, lastName }, resetAnswers }) =>
   <Layout>
-    <h1>Who is {currentPerson.firstName} {currentPerson.lastName}?</h1>
+    <h1 className="play__question" >Who is {firstName} {lastName}?</h1>
     <PersonList persons={persons} />
+    <button className="play__reset" onClick={resetAnswers} >Next Round</button>
   </Layout>
 
-let mapStateToProps = ({ persons, url }) => ({
-  persons: pipe(current, shuffle, limit(5))(persons),
-  currentPerson: persons[0],
-  url
+let mapStateToProps = ({ allPersons, question, answers }) => ({
+  persons: allPersons.filter(p => answers.includes(p.id)),
+  currentPerson: allPersons.find(p => question === p.id)
 });
 
+let mapDispatchToProps = {
+  resetAnswers
+}
+
 let enhance = compose(
-  connect(mapStateToProps)
+  connect(mapStateToProps, mapDispatchToProps)
 );
 
 export default enhance(PlayScreen);

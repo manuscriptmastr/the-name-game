@@ -11,6 +11,14 @@
   background-color: lightgray;
 }
 
+.person--green, .person--green:hover {
+  background-color: lightgreen;
+}
+
+.person--red, .person--red:hover {
+  background-color: lightcoral;
+}
+
 .person__img {
   width: 15vw;
   height: 15vw;
@@ -23,10 +31,5 @@
 .person__hint {
   max-width: 15vw;
   text-align: center;
-  opacity: 0;
   transition: inherit;
-}
-
-.person:hover .person__hint {
-  opacity: 1;
 }
