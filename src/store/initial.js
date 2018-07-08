@@ -11,6 +11,10 @@ const initial = {
     "29XgxedqmAO86mGeImqwEK",
     "2dMXmpIHPicQW6SW60qeKs"
   ],
+  results: {
+    correct: 0,
+    incorrect: 0
+  },
   allPersons: [
     {
       "id": "4NCJTL13UkK0qEIAAcg4IQ",
