@@ -1,1 +1,1 @@
-export let updateAll = (state, { payload }) => ({ ...state, persons: payload });
+export let updateAll = (state, { payload }) => ({ ...state, allPersons: payload });

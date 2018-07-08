@@ -3,7 +3,15 @@ const initial = {
   settings: {
     visible: false
   },
-  persons: [
+  question: "1X2lomt8iIYImCQysey6Eq",
+  answers: [
+    "4NCJTL13UkK0qEIAAcg4IQ",
+    "1X2lomt8iIYImCQysey6Eq",
+    "56zuFgdeoMqAOuIKe0M4AU",
+    "29XgxedqmAO86mGeImqwEK",
+    "2dMXmpIHPicQW6SW60qeKs"
+  ],
+  allPersons: [
     {
       "id": "4NCJTL13UkK0qEIAAcg4IQ",
       "type": "people",
@@ -82,6 +90,30 @@ const initial = {
       },
       "socialLinks": [
         
+      ]
+    },
+    {
+      "id": "2dMXmpIHPicQW6SW60qeKs",
+      "type": "people",
+      "slug": "christy-phillips",
+      "jobTitle": "Chief Talent Officer",
+      "firstName": "Christy",
+      "lastName": "Phillips",
+      "headshot": {
+        "type": "image",
+        "mimeType": "image/png",
+        "id": "64IBagkE0gga82G2W6cWsm",
+        "url": "//images.ctfassets.net/3cttzl4i3k1h/64IBagkE0gga82G2W6cWsm/95b43c4a0c549dc33a80f23d4382c4f4/christy.png",
+        "alt": "Christy Phillips, Chief Talent Officer at WillowTree, Inc.",
+        "height": 664,
+        "width": 664
+      },
+      "socialLinks": [
+        {
+          "type": "linkedin",
+          "callToAction": "Follow Christy Phillips on LinkedIn",
+          "url": "https://www.linkedin.com/in/christyphillips1/"
+        }
       ]
     }
   ]
