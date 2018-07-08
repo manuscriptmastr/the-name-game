@@ -2,7 +2,8 @@ const initial = {
   url: "https://willowtreeapps.com/api/v1.0/profiles",
   settings: {
     visible: false,
-    hints: true
+    hints: true,
+    filter: ''
   },
   question: "1X2lomt8iIYImCQysey6Eq",
   answers: [

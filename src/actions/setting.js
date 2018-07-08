@@ -9,3 +9,7 @@ hide.toString = () => HIDE_SETTINGS;
 const TOGGLE_HINTS = "TOGGLE_HINTS";
 export let toggleHints = () => ({ type: TOGGLE_HINTS });
 toggleHints.toString = () => TOGGLE_HINTS;
+
+const UPDATE_FILTER = "UPDATE_FILTER";
+export let updateFilter = (substring) => ({ type: UPDATE_FILTER, payload: substring });
+updateFilter.toString = () => UPDATE_FILTER;
