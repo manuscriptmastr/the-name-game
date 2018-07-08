@@ -4,4 +4,11 @@
 
 .play__reset {
   margin-top: 50px;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  border: 3px solid black;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
 }

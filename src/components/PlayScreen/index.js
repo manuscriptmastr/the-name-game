@@ -10,7 +10,7 @@ let PlayScreen = ({ persons, currentPerson: { firstName, lastName }, resetAnswer
   <Layout>
     <h1 className="play__question" >Who is {firstName} {lastName}?</h1>
     <PersonList persons={persons} />
-    <button className="play__reset" onClick={resetAnswers} >Reset</button>
+    <button className="play__reset" onClick={resetAnswers} >Next Round</button>
   </Layout>
 
 let mapStateToProps = ({ allPersons, question, answers }) => ({
