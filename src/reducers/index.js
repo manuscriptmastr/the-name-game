@@ -19,7 +19,9 @@ let allReducers = {
   [answerActions.resetAll]: answerReducers.resetAll,
   [resultActions.submit]: resultReducers.submit,
   [settingActions.show]: settingReducers.show,
-  [settingActions.hide]: settingReducers.hide
+  [settingActions.hide]: settingReducers.hide,
+  [settingActions.toggleHints]: settingReducers.toggleHints,
+  [settingActions.updateFilter]: settingReducers.updateFilter
 };
 
 let reducers = (state = initial, action) => {
